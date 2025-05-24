@@ -1,0 +1,74 @@
+{
+  "name": "botypro-enhanced",
+  "version": "2.0.0",
+  "description": "BotyPro: Stealth Edition - Enhanced Telegram Bot",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "automation",
+    "electron"
+  ],
+  "author": "BotyPro Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^27.3.11"
+  },
+  "dependencies": {
+    "@types/node": "^20.8.0",
+    "big-integer": "^1.6.52",
+    "electron-squirrel-startup": "^1.0.1",
+    "telegram": "^2.15.10"
+  },
+  "build": {
+    "appId": "com.botypro.enhanced",
+    "productName": "BotyPro Enhanced",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}

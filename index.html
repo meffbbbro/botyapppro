@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotyPro: Stealth Edition - Enhanced</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="title-section">
+                <h1 class="app-title">🚀 BotyPro: Stealth Edition</h1>
+            </div>
+            <div class="status-section">
+                <div id="connection-status" class="status-label">Not Connected</div>
+                <div class="version-badge">v2.0 Enhanced</div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="login">🔐 Login</button>
+            <button class="tab-btn" data-tab="queue">🚀 Queue</button>
+            <button class="tab-btn" data-tab="ai">🤖 AI</button>
+            <button class="tab-btn" data-tab="log">📜 Log</button>
+        </nav>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- Login Tab -->
+            <div id="login-tab" class="tab-pane active">
+                <div class="section-group">
+                    <h2 class="section-title">💬 Telegram Connection</h2>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="api-id">🔑 API ID:</label>
+                            <input type="text" id="api-id" placeholder="Enter your Telegram API ID...">
+                        </div>
+                        <div class="input-group">
+                            <label for="api-hash">🔐 API Hash:</label>
+                            <input type="text" id="api-hash" placeholder="Enter your Telegram API Hash...">
+                        </div>
+                        <div class="input-group">
+                            <label for="phone-number">📱 Phone Number:</label>
+                            <input type="text" id="phone-number" placeholder="+1234567890">
+                        </div>
+                        <div class="input-group">
+                            <label for="session-string">💾 Session String:</label>
+                            <input type="text" id="session-string" placeholder="Optional: Paste saved session string...">
+                        </div>
+                    </div>
+                    <div class="button-center">
+                        <button id="connect-btn" class="btn-primary">🔗 Connect to Telegram</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Queue Tab -->
+            <div id="queue-tab" class="tab-pane">
+                <div class="queue-layout">
+                    <!-- Left Side: Groups -->
+                    <div class="groups-section">
+                        <div class="section-group">
+                            <h2 class="section-title">👥 Select Target Groups</h2>
+                            <div class="button-center">
+                                <button id="refresh-groups-btn" class="btn-secondary">🔄 Refresh Groups</button>
+                            </div>
+                            <div id="groups-list" class="groups-list"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Templates and Settings -->
+                    <div class="controls-section">
+                        <!-- Message Templates -->
+                        <div class="section-group">
+                            <h2 class="section-title">💌 Message Templates</h2>
+                            <div class="templates-container">
+                                <textarea id="template-1" class="message-template" placeholder="✨ Message Template 1..."></textarea>
+                                <textarea id="template-2" class="message-template" placeholder="✨ Message Template 2..."></textarea>
+                                <textarea id="template-3" class="message-template" placeholder="✨ Message Template 3..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Queue Settings -->
+                        <div class="section-group">
+                            <h2 class="section-title">⚙️ Queue Settings</h2>
+                            <div class="settings-grid">
+                                <div class="input-group">
+                                    <label for="delay">⏱️ Delay between messages (seconds):</label>
+                                    <input type="number" id="delay" min="1" max="3600" value="5">
+                                </div>
+                                <div class="input-group">
+                                    <label for="repeat-cycles">🔄 Repeat cycles:</label>
+                                    <input type="number" id="repeat-cycles" min="1" max="100" value="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Queue Control -->
+                        <div class="section-group">
+                            <h2 class="section-title">🚀 Queue Control</h2>
+                            <div id="progress-container" class="progress-container" style="display: none;">
+                                <div id="progress-bar" class="progress-bar">
+                                    <div id="progress-fill" class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button id="start-queue-btn" class="btn-primary">🚀 Start Queue</button>
+                                <button id="stop-queue-btn" class="btn-danger" style="display: none;">⏹️ Stop Queue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Tab -->
+            <div id="ai-tab" class="tab-pane">
+                <div class="section-group">
+                    <h2 class="section-title">🤖 AI Features</h2>
+                    <div class="placeholder">
+                        <p>🤖 AI features coming soon!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Log Tab -->
+            <div id="log-tab" class="tab-pane">
+                <div class="section-group">
+                    <h2 class="section-title">📜 Activity Log</h2>
+                    <div id="log-display" class="log-display"></div>
+                    <div class="button-center">
+                        <button id="clear-log-btn" class="btn-secondary">🧹 Clear Log</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for input dialogs -->
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <div class="modal">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <input type="text" id="modal-input" class="modal-input">
+            <div class="modal-buttons">
+                <button id="modal-cancel" class="btn-secondary">Cancel</button>
+                <button id="modal-confirm" class="btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
