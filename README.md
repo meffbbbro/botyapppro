@@ -17,44 +17,9 @@ A powerful Telegram messaging automation tool for sending messages to multiple g
 
 - ** Unzip contents, and run exe file.
 
-
 ### Prerequisites
 
-- **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
-- **npm** (comes with Node.js)
 - **Telegram API Credentials** - [Get them here](https://my.telegram.org/apps)
-
-### Quick Setup
-
-1. **Navigate to the project directory:**
-
-   ```bash
-   cd botyproenhanged-electron
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Run the application:**
-   ```bash
-   npm start
-   ```
-
-### Development Mode
-
-To run with developer tools enabled:
-```bash
-npm run dev
-```
-
-### Building Executables
-
-To create distributable packages:
-```bash
-npm run build
-```
 
 ## 🎯 Getting Started
 
@@ -74,7 +39,7 @@ npm run build
    - API Hash
    - Phone Number (with country code, e.g., +1234567890)
 4. Click **🔗 Connect to Telegram**
-5. Enter the verification code sent to your phone
+5. Enter the verification code sent to your other telegram device.
 6. If you have 2FA enabled, enter your password when prompted
 
 ### 3. Set Up Message Queue
@@ -146,18 +111,6 @@ npm run build
 - **"Not connected"**: Click the connect button in the Login tab
 - **"No groups selected"**: Check at least one group in the Queue tab
 - **"No messages"**: Add at least one message template
-
-## 📁 Project Structure
-
-```
-botyproenhanged-electron/
-├── main.js          # Electron main process
-├── renderer.js      # Application logic
-├── index.html       # UI structure
-├── style.css        # Styling and animations
-├── package.json     # Dependencies and scripts
-└── README.md        # This file
-```
 
 ## 🔄 Updates & Maintenance
 
