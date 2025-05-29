@@ -1,19 +1,22 @@
-# 🚀 BotyPro Enhanced - Electron Edition
+# 🚀 BotyPro: Stealth Edition v2.0 Enhanced
 
-A modern, cross-platform Telegram automation tool built with Electron, featuring a stunning UI with gradients, animations, and intuitive controls.
+A powerful Telegram messaging automation tool for sending messages to multiple groups with customizable templates and scheduling options.
 
 ## ✨ Features
 
 - **🎨 Stunning Modern UI**: Beautiful gradients, animations, and responsive design
 - **🔐 Secure Authentication**: Telegram API integration with session persistence
-- **👥 Group Management**: Easy selection and management of target groups
-- **💌 Message Templates**: Multiple customizable message templates
+- **👥 Group Management**: Pulls groups that have been added from the account.
+- **💌 Message Templates**: Multiple customizable savable message templates to send
 - **⚙️ Advanced Settings**: Configurable delays, cycles, and queue control
 - **📜 Real-time Logging**: Live activity feed with color-coded status messages
 - **💾 Auto-save Configuration**: Automatic saving of all settings
 - **🚀 Progress Tracking**: Visual progress bars and queue management
 
 ## 🔧 Installation
+
+- ** Unzip contents, and run exe file.
+
 
 ### Prerequisites
 
