@@ -1,0 +1,16 @@
+{
+  "name": "botypro-enhanced",
+  "version": "2.0.0",
+  "description": "BotyPro: Stealth Edition - Enhanced Telegram Bot",
+  "main": "main.js",
+  "author": "BotyPro Team",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.8.0",
+    "big-integer": "^1.6.52",
+    "telegram": "^2.15.10"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.6"
+  }
+}
