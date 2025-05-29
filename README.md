@@ -141,3 +141,9 @@ If you encounter any issues:
 **🎉 Enjoy using BotyPro Enhanced!** 
 
 *Built with ❤️ using Electron, modern web technologies, and a passion for beautiful, functional software.*
+
+![Screenshot 1](1.png)
+![Screenshot 2](2.png)
+![Screenshot 1](3.png)
+![Screenshot 2](4.png)
+![Screenshot 1](5.png)
